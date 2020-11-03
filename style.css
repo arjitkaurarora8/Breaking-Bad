@@ -1,0 +1,201 @@
+@font-face { 
+    font-family: Sketch; src: url('./assets/Sketch.ttf'); 
+}
+
+@font-face { 
+    font-family: Breaking Bad; src: url('./assets/Heart\ Breaking\ Bad.otf'); 
+}
+
+@font-face { 
+    font-family: Bad Grunge; src: url('./assets/BAD\ GRUNGE.ttf'); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Page__Container {
+    overflow-x: hidden;
+    font-family: "Bad Grunge";
+}
+
+.HomePage {
+    width: 100%;
+    position: relative;
+
+}
+
+.Hamburger {
+    display: none;
+}
+
+.Navbar {
+    height: 4.5rem;
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Bad Grunge";
+    padding: 0rem 2rem;
+    width: 100%;
+    background: linear-gradient(to top, #232526, #28292b);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.Logo img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.Navbar--middle {
+    display: none;
+}
+
+.Navbar--right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar--right a {
+    text-decoration: none;
+    color: #ffffffd5;
+    padding: 0rem 2rem;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: 5px;
+    transition: all 0.5s ease;
+}
+
+.Navbar--right img {
+    margin-left: 2rem;
+}
+
+.Navbar--right a:hover {
+    color: yellow;
+}
+
+
+
+.Navbar--right img, .Navbar--middle img {
+    width: 5rem;
+    height: 2.5rem;
+}
+
+.Home__img {
+    position: absolute;
+    z-index: -1;
+    top: 4rem;
+    left: 0;
+}
+
+.Home__img img {
+    width: 100vw;
+    height: 95vh;
+    object-fit: cover;
+}
+
+.Home__content {
+    height: 100vh;
+    padding: 0rem 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom,rgba(20, 20, 20, 0) 50% , rgba(20, 20, 20, 0.883));
+}
+
+.Home__content--small {
+    min-width: 20rem;
+    max-width: 60rem;
+    color: rgba(245, 245, 245, 0.897);
+    font-size: 1.7rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+    margin-bottom: 6rem;
+    word-spacing: 10px;
+    font-family: 'Sketch';
+}
+
+.Home__content--large {
+    font-size: 7rem;
+    color: #e4d722;
+    width: min-content;
+    line-height: 5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 6px;
+}
+
+.Explore {
+    background-color: #141414;
+    width: 85%;
+    padding: 0 10vw;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #ffffff;
+}
+
+.Explore__container {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.Explore__Heading {
+    width: max-content;
+    margin: 4rem 0rem 2rem 0rem;
+    padding: 0.5rem;
+    font-size: 4.5rem;
+    font-weight: 400;
+    letter-spacing: 10px;
+    font-family: 'Bad Grunge';
+    position: relative;
+    /* border-bottom: 8px solid yellow; */
+}
+
+
+.Cards {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.Card__1, .Card__2 {
+    margin: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    position: relative;
+    /* overflow: hidden; */
+    color: white;
+}
+
+.Card__1 {
+    width: 13rem;
+    height: 19rem;
+    transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.Card__2 {
+    width: 25rem;
+    height: 20rem;
+    margin: 0rem 5rem 5rem 0rem;
+    transition: all 0.3s ease;
+}
+
+.Card__1 div {
+    transition: all 0.3s ease;
+}
