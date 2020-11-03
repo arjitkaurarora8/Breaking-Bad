@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="show">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./assets/Breaking Bad logo.svg">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="https://kit.fontawesome.com/7e453e5ecd.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+
+    <title>Breaking Bad | The Complete Guide</title>
+</head>
+<body>
+    <div class="Page__Container">
+        <div class="HomePage">
+            <div class="Navbar">
+                <div class="Navbar--left">
+                    <div class="Logo">
+                        <a href="#"><img src="./assets/Breaking Bad logo.svg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="Navbar--middle">
+                    <img src="./assets/Logo.png" alt="AMC">
+                </div>
+
+                <div class="Hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+                <div class="Navbar--right">
+                    <a href="#">home</a>
+                    <a href="#cast">cast</a>
+                    <a href="#seasons">seasons</a>
+
+                    <a href="extras">extras</a>
+                    <img src="./assets/Logo.png" alt="AMC">
+                </div>
+            </div>
+
+            <div class="Home__img" >
+                <img ng-src="{{ img }}" alt="" ng-init="img = './assets/Pic__2.jpg'">
+            </div>
+
+            <div class="Home__content" id="home">
+                <div class="Home__content--large" ng-init="heading='Breaking \n Bad'">
+                    {{ heading }}
+                </div>
+
+                <div class="Home__content--small" ng-init="content = 'Walt White transformation from a well-meaning family man to ruthless drug kingpin is almost complete. Newly empowered and increasingly remorseless, Walt finds himself attempting to control a tenuous empire. But uneasy lies the head that wears the crown.'">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        <div class="Explore">
+            <div class="Explore__container">
+                <div class="Explore__Heading" id="cast">
+                    Cast
+                </div>
+    
+                <div class="Cards" ng-init="crew=[
+                        { 
+                            img: './assets/Pic__17.jpg', 
+                            img1: './assets/Pic__3.png', 
+                            name: 'Bryan Cranston', 
+                            cast: 'Walter White', 
+                        },
+                        {
+                            img: './assets/Pic__18.jpg',
+                            img1: './assets/Pic__4.jpg',
+                            name: 'Aaron Paul',
+                            cast: 'Jesse Pinkman'
+                        },
+                         
+                        {
+                            img: './assets/Pic__19.jpg',
+                            img1: './assets/Pic__5.jpg',
+                            name: 'Anna Gunn',
+                            cast: 'Skyler White' 
+                        },
+                         
+                        {
+                            img: './assets/Pic__20.jpg',
+                            img1: './assets/Pic__6.jpg',
+                            name: 'Dean Norris',
+                            cast: 'Hank Schrader'
+                        },
+                         
+                        {
+                            img: './assets/Pic__21.jpg',
+                            img1: './assets/Pic__7.jpg',
+                            name: 'Raymond Cruz',
+                            cast: 'Tuco'
+                        },
+                         
+                        {
+                            img: './assets/Pic__8.jpeg',
+                            img1: './assets/Pic__8.jpeg',
+                            name: 'Giancarlo Esposito',
+                            cast: 'Gus Fring'
+                        },
+                         
+                        {
+                            img: './assets/Pic__22.jpg',
+                            img1: './assets/Pic__9.jpg',
+                            name: 'Bob Odenkirk',
+                            cast: 'Saul Goodman'
+                        },
+                         
+                        {
+                            img: './assets/Pic__23.jpg',
+                            img1: './assets/Pic__10.jpg',
+                            name: 'Betsy Brandt',
+                            cast: 'Marie Schrader'
+                        },
+                         
+                        {
+                            img: './assets/Pic__24.jpg',
+                            img1: './assets/Pic__11.jpg',
+                            name: 'RJ Mitte',
+                            cast: 'Walter Flynn'
+                        },
+                         
+                        {
+                            img: './assets/Pic__25.jpg',
+                            img1: './assets/Pic__12.jpg',
+                            name: 'Charles Baker',
+                            cast: 'Skinny Pete'
+                        },
+                         
+                        {
+                            img: './assets/Pic__26.jpeg',
+                            img1: './assets/Pic__13.jpeg',
+                            name: 'Jesse Piemons',
+                            cast: 'Todd Plemons'
+                        },
+                         
+                        {
+                            img: './assets/Pic__27.jpg',
+                            img1: './assets/Pic__14.jpeg',
+                            name: 'Steven Michael',
+                            cast: 'Gomez'
+                        },
+                         
+                        {
+                            img: './assets/Pic__28.jpg',
+                            img1: './assets/Pic__15.jpg',
+                            name: 'Matt L. Jones',
+                            cast: 'Badger'
+                        },
+                         
+                        {
+                            img: './assets/Pic__29.jpeg',
+                            img1: './assets/Pic__16.jpg',
+                            name: 'Krysten Ritter',
+                            cast: 'Jane Margolis'
+                        }
+                    ]">
+    
+                    <a href="#home" class="Card__1" ng-repeat="person in crew" ng-controller="name" ng-click="changeHome()">
+                        <img ng-src="{{ person.img1 }}" ng-alt="{{ person.img }}">
+                        <div>
+                            <h2>{{ person.cast }}</h2>
+                            <h4>{{ person.name }}</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+
+            <div class="Explore__Heading" id="seasons">
+                Seasons
+            </div>
+
+            <div class="Cards" ng-init="seasons=[
+                    { img: './assets/Pic__30.jpg', name: 'Season 1', about:''},
+                    { img: './assets/Pic__31.jpg', name: 'Season 2', about:''},
+                    { img: './assets/Pic__32.jpg', name: 'Season 3', about:''},
+                    { img: './assets/Pic__33.jpg', name: 'Season 4', about:''},
+                    { img: './assets/Pic__34.jpg', name: 'Season 5', about:''}
+                ]">
+
+                <div class="Card__2" ng-repeat="season in seasons">
+                    <img ng-src="{{ season.img }}" alt="">
+                    <div>
+                        <h2>{{ season.name }}</h2>
+                        <h4>{{ season.about }}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Explore__Heading" id="extras">
+                Extras
+            </div>
+
+            <div class="Cards" ng-init="when=[
+                    { img: './assets/Pic__35.jpg', name: 'Highlights Half Measure'},
+                    { img: './assets/Pic__36.jpg', name: 'Breaking Bad: Showdown'},
+                    { img: './assets/Pic__37.jpg', name: 'Highlights: A Handy Wife'},
+                    { img: './assets/Pic__38.jpg', name: 'Inside Breaking Bad'},
+                    { img: './assets/Pic__39.jpg', name: 'Walt Aztek View'},
+                ]">
+
+                <div class="Card__2" ng-repeat="info in when">
+                    <img ng-src="{{ info.img }}" alt="">
+                    <div>
+                        <h2>{{ info.name }}</h2>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+
+        <section class="Footer">
+            <div class="Footer--left">
+                <a href="https://www.netflix.com"><img src="./assets/Logo.png" alt=""></a>
+            </div>
+
+            <div class="Footer--middle">
+                <img src="./assets/Breaking Bad logo.svg" class="footer__logo">
+            </div>
+
+            <div class="Footer--right">
+                <a href="#">Press</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
