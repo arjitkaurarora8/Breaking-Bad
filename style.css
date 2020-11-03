@@ -199,3 +199,137 @@ html {
 .Card__1 div {
     transition: all 0.3s ease;
 }
+
+
+.Card__1 img, .Card__2 img {
+    transition: all 0.4s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Card__1:hover {
+    cursor: pointer;
+    transform: scale(1.05) translateY(-1rem);
+}
+
+.Card__1:hover div, .Card__2:hover div {
+    background-color: rgba(255, 255, 255, 0.815);
+    color: black;
+}
+
+.Card__1:hover img, .Card__2:hover img {
+    box-shadow: 10px 10px 20px rgb(27, 27, 27), -10px -10px 20px rgb(27, 27, 27);
+}
+
+.Card__1 div, .Card__2 div {
+    padding: 0.5rem 0.5rem 1.2rem 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+
+}
+
+.Card__1 h2, .Card__2 h2 {
+    font-weight: 100;
+    font-family: "Bad Grunge";
+    font-size: 2.3rem;
+    margin-bottom: 0.1rem;
+}
+
+.Card__2 h2 {
+    font-size: 2.8rem;
+}
+
+.Card__1 h4, .Card__2 h4 {
+    font-family: Helvetica,sans-serif;
+    color: grey;
+    word-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.Card__2:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+}
+
+.Footer {
+    height: 14rem;
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 2rem;
+    background-color: #000000;
+}
+
+.Footer--left {
+    flex: 0.15;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Footer--left img {
+    width: 7rem;
+    height: 1.9rem;
+    object-fit: cover;
+}
+
+.Footer--middle {
+    flex: 0.2;
+    justify-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.Footer--middle img {
+    color: #ffffff;
+    height: 5rem;
+    width: 5rem;
+}
+
+.Footer--right {
+    flex: 0.2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Footer a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.Footer a:hover {
+    color: yellow;
+}
+
+@media screen and (max-width: 780px) {
+    html {
+        font-size: 70.5%;
+    }
+
+    .Navbar--right {
+        display: none;
+    }
+
+    .Hamburger {
+        font-size: 2.5rem;
+        font-weight: 100;
+        color: white;
+        display: inline-block;
+
+    }
+
+    .Explore {
+        width: 95%;
+        padding: 0 5%;
+    }
+}
+
